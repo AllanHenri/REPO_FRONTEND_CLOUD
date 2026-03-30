@@ -1,0 +1,39 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  NODE_VERSION: '16.x'
+
+jobs:
+- job: BuildMicrofrontends
+  displayName: 'Build Microfrontends'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '$(NODE_VERSION)'
+    displayName: 'Install Node.js'
+
+  - script: |
+      cd microfrontend1
+      npm install
+      npm run build
+    displayName: 'Build Microfrontend 1'
+
+  - script: |
+      cd microfrontend2
+      npm install
+      npm run build
+    displayName: 'Build Microfrontend 2'
+
+- job: BuildService
+  displayName: 'Build Service'
+  dependsOn: BuildMicrofrontends
+  steps:
+  - script: |
+      cd service
+      npm install
+      npm run build
+    displayName: 'Build Service'
