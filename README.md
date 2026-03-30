@@ -1,5 +1,12 @@
 # EduEvents - Plataforma de Microfrontends Acadêmicos
 
+Alunos:
+- João Yutaka
+- Allan Henrique
+- Irvanlei Abreu
+- Nelson Costa
+- Felipe Silva
+
 Plataforma integrada de gerenciamento de congressos acadêmicos utilizando **arquitetura de microfrontends** com React, Vite, Tailwind CSS e Module Federation.
 
 ## 🎯 Visão Geral
