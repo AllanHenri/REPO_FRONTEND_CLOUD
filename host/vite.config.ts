@@ -29,5 +29,6 @@ export default defineConfig({
     target: 'esnext',
     minify: false,
     cssCodeSplit: false,
+    outDir: 'build',
   },
 })
