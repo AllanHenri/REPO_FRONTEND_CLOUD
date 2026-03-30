@@ -22,7 +22,7 @@ const LoginPage: React.FC = () => {
     e.preventDefault()
     setLoading(true)
     try {
-      await login(email, password)
+      await login(email)
     } finally {
       setLoading(false)
     }

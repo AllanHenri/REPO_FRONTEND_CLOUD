@@ -5,7 +5,7 @@ interface AuthContextType {
   user: User | null
   isAuthenticated: boolean
   token: string | null
-  login: (email: string, password: string) => Promise<void>
+  login: (email: string) => Promise<void>
   logout: () => void
   updateUser: (user: User) => void
 }
@@ -34,7 +34,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, [])
 
-  const login = useCallback(async (email: string, password: string) => {
+  const login = useCallback(async (email: string) => {
     // Mock: simulação de login
     await new Promise((resolve) => setTimeout(resolve, 800))
 
