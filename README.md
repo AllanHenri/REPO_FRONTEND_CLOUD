@@ -9,6 +9,8 @@ Alunos:
 
 Plataforma integrada de gerenciamento de congressos acadêmicos utilizando **arquitetura de microfrontends** com React, Vite, Tailwind CSS e Module Federation.
 
+Link do Azure: https://white-plant-075f2d50f.4.azurestaticapps.net
+
 ## 🎯 Visão Geral
 
 **EduEvents** centraliza em uma única interface modular:
